@@ -1,19 +1,19 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import Home from './pages/Home'
-import About from './pages/About'
-import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+      <div className="min-h-screen bg-bg-primary">
+        <Routes>
+          <Route path="/" element={
+            <div className="flex items-center justify-center min-h-screen">
+              <h1 className="text-4xl font-black text-gradient">
+                Nexora — Setup Complete ✓
+              </h1>
+            </div>
+          } />
+        </Routes>
+      </div>
     </BrowserRouter>
   )
 }
