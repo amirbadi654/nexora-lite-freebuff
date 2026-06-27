@@ -1,21 +1,18 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HomeLayout, DashboardLayout } from './components/layout/PageLayout'
+import Home from './pages/Home'
 
 export default function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-bg-primary">
         <Routes>
-          {/* Home routes */}
+          {/* Home route */}
           <Route
             path="/"
             element={
               <HomeLayout>
-                <div className="flex min-h-screen items-center justify-center pt-16">
-                  <h1 className="text-4xl font-black text-gradient">
-                    Nexora — Setup Complete ✓
-                  </h1>
-                </div>
+                <Home />
               </HomeLayout>
             }
           />
