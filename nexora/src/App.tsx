@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HomeLayout, DashboardLayout } from './components/layout/PageLayout'
 import Home from './pages/Home'
+import Dashboard from './pages/Dashboard'
 
 export default function App() {
   return (
@@ -17,14 +18,12 @@ export default function App() {
             }
           />
 
-          {/* Dashboard routes */}
+          {/* Dashboard route */}
           <Route
             path="/dashboard"
             element={
               <DashboardLayout>
-                <h1 className="text-2xl font-bold text-text-primary">
-                  Dashboard
-                </h1>
+                <Dashboard />
               </DashboardLayout>
             }
           />
