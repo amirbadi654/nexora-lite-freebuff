@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HomeLayout, DashboardLayout } from './components/layout/PageLayout'
 import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
+import Challenge from './pages/Challenge'
 
 export default function App() {
   return (
@@ -31,9 +32,7 @@ export default function App() {
             path="/challenge"
             element={
               <DashboardLayout>
-                <h1 className="text-2xl font-bold text-text-primary">
-                  Challenge
-                </h1>
+                <Challenge />
               </DashboardLayout>
             }
           />
